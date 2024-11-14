@@ -11,7 +11,7 @@ hide: false
 link:
   - https://www.eduvidual.at/mod/assign/view.php?id=6816057
 ---
-# `=dv this.aliases` 
+# A1 Protkoll Einführung Webentwicklung 
 ## Metadaten
 - Autor: Ingo Schlapschy
 - Schuljahr: 2024/25
@@ -19,7 +19,7 @@ link:
 - Klasse: 3aAPC
 - Gruppe: C
 - Fach: ITL12
-- Datum: `=dv this.date`
+- Datum: 2024-11-14
 ### Angabe
 ```markdown
 - Kommunikationsablauf – Webserver und Client/Browser
@@ -76,7 +76,8 @@ link:
 	- Das was google, amazon, etc. machen, aber illegal
 - SQL Injections
 	- eingabe von SQL-Befehlen z. B. über das ausfüllen von Textfeldern
-	- [xkcd: Exploits of a Mom](https://xkcd.com/327/)  ![](attachment/d4df4e2223c18059250c1b170ca561ce.png)
+	- [xkcd: Exploits of a Mom](https://xkcd.com/327/)  
+	- ![](attachment/d4df4e2223c18059250c1b170ca561ce.png)
 - Cross-Site-Scripting (XSS)
 	- Code wird auf website eingeschleust
 - Session-Hijacking
