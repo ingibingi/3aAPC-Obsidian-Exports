@@ -28,12 +28,12 @@ link:
 - Maßnahmen zum Schutz von Webanwendungen (Verschlüsselung, Multifaktor Authentifizierung, Sanitizing/Prepared Statements,...)
 ```
 ### ToDo
-- [x] Kommunikationsablauf erklären Webserver - Client(Browser) ✅ 2024-11-14
-- [x] Entwicklungsumgebung aufsetzen ✅ 2024-11-14
-	- [x] XAMPP installieren ✅ 2024-11-14
-	- [x] Netbeans installieren ✅ 2024-11-14
-- [x] Überblick Sicherheitsrisiken Webandwendungen ✅ 2024-11-14
-- [x] Überblick Schutzmaßnahmen ✅ 2024-11-14
+- [x] Kommunikationsablauf erklären Webserver - Client(Browser)
+- [x] Entwicklungsumgebung aufsetzen
+	- [x] XAMPP installieren
+	- [x] Netbeans installieren
+- [x] Überblick Sicherheitsrisiken Webandwendungen
+- [x] Überblick Schutzmaßnahmen
 ## Kommunikation Webserver - Client
 > [!NOTE]+ https://www.eduvidual.at/course/section.php?id=3377590
 > ![](attachment/21fcb88a4c118e799363fd33d8c2321b.png)
