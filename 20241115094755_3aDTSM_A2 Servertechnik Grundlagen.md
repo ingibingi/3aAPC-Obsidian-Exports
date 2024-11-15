@@ -18,7 +18,6 @@ info:
 - Schuljahr: 2024/25
 - Lehrgang: 2
 - Klasse: 3aAPC
-- Gruppe: C
 - Fach: DTSM
 - Datum: 2024-11-15
 ---
