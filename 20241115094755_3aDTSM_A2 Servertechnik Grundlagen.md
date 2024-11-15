@@ -41,7 +41,7 @@ Inhaltsverzeichnis
 - [Quellen](#quellen)
 ## Angabe
 
-> [!NOTE] Angabe - Original
+> [!Angabe] Original
 > - Besondere Eigenschafen von Serverhardware nennen
 > - 4 verschiedene Bauformen für Server erkennen und beschreiben können  
 > - redundante Hardware begründen
