@@ -4,10 +4,11 @@ aliases:
 cssclasses: 
 tags:
   - 3aAPC/ITL12
+  - ToDo/Finish
+  - ToDo/Submit
 date: 2024-11-14
 deadline: 2024-11-21
-setToDo: true
-hide: false
+hideFromQuery: false
 link:
   - https://www.eduvidual.at/mod/assign/view.php?id=6816057
 ---
