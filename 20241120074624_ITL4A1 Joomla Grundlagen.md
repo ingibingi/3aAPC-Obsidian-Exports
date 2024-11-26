@@ -102,11 +102,11 @@ https://docs.joomla.org/Portal:Beginners/de
 - Roasters
 - Home
 ![](attachment/b4ef9c2801856f2ebd7b1983cb9da366.png)
-
-![](attachment/08aefbb396eed48d2ad4303655f7afee.png)
-
+Featured Articles auf Homepage
+![](attachment/ffdc2391919c10aca39fda1c63a8eeb0.png)
+Feed für Site-Updates
 ![](attachment/17fd3954431ff88a045229344558b616.png)
-
+Kaffee-Equipment
 ![](attachment/bd43859a832ae20d06de55b1ec82bf69.png)
 ### Artikel
 - Paul und Bohne
