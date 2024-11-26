@@ -3,16 +3,15 @@ aliases:
 cssclasses: 
 tags:
   - 3aAPC/ITL4
-  - ToDo/Finish
-  - ToDo/Submit
 date: 2024-11-20
-deadline: 
+deadline: 2024-11-27
 hideFromQuery: false
-link: 
+link:
+  - https://www.eduvidual.at/mod/assign/view.php?id=6816095
 info:
 ---
 
-# NameDesThemas
+# Joomla Grundlagen
 ---
 - Autor: Ingo Schlapschy
 - Schuljahr: 2024/25
@@ -103,7 +102,12 @@ https://docs.joomla.org/Portal:Beginners/de
 - Roasters
 - Home
 ![](attachment/b4ef9c2801856f2ebd7b1983cb9da366.png)
-![](attachment/50b6b59e396ba92b1c139bd26e3f6864.png)
+
+![](attachment/08aefbb396eed48d2ad4303655f7afee.png)
+
+![](attachment/17fd3954431ff88a045229344558b616.png)
+
+![](attachment/bd43859a832ae20d06de55b1ec82bf69.png)
 ### Artikel
 - Paul und Bohne
 - Hario Switch
