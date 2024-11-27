@@ -115,6 +115,25 @@ Kaffee-Equipment
 - Outin Nano
 - Introduction
 ![](attachment/781cde9d5140cbea418c0e210c87c418.png)
+## Erweiterungen
+### Gästebuch
+![](attachment/020c82ee1427db02da3d71d9f86e7e2a.png)
+
+![](attachment/e2d2681a6373bad7a06f3f9be633b32b.png)
+
+![](attachment/2c8fc74c09e6fe05ccf59404b785138f.png)
+## Fehlermeldung -> Shutdown MariaDB
+beim Versuch eine Galerie einzubauen plötzlich folgende Fehlermeldung
+![](attachment/06508e61c0d3a1d38c5a76cf286d32cd.png)
+
+mySQL wird automatisch beendet.
+Neustart behebt das Problem nicht
+Blick in die Logs -> Problem mit Plugin "Aria" (was auch immer das sein mag)
+![](attachment/79d3fc0df8ca636c6e580fd5117e9d8a.png)
+
+Online-Problemlösungs-Anleitung durchführen nicht möglich
+![](attachment/7e25c4fe39e429922a9f70d4f4727cf0.png)
+-> Deswegen Abbruch des Projekts und XAMPP neu installieren
 ## Notizen aus dem Unterricht
 
 ## Quellen
