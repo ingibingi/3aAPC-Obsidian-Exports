@@ -24,9 +24,6 @@ info:
 - Datum: 2024-12-02
 
 ---
-`ToDo: Create Table of Content && Remove this comment`
-
----
 ## Angabe
 - Begründung für ausreichend Klimatisierung nennen
 - ein Klimatisierungskonzept näher beschreiben
