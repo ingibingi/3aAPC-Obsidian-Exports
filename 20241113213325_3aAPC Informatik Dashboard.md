@@ -1,7 +1,8 @@
 ---
 aliases:
   - 3aAPC Informatik Dashboard
-cssclasses: 
+cssclasses:
+  - \
 tags:
   - 3aAPC/Inf
   - Dashboard
