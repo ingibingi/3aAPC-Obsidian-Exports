@@ -112,7 +112,53 @@ Dokumentation:
 - huge 3.1 (stable) deinstallieren
 - composer deinstallieren
 - installation mit huge 3.3.1 neu starten
+## Fragen
+### PHP Klassen
+```PHP
+<?php  
+class SimpleClass  
+{  
+// Deklaration einer Eigenschaft  
+public $var = 'ein Standardwert';  
+  
+// Deklaration einer Methode  
+public function displayVar() {  
+echo $this->var;  
+}  
+}  
+?>
+```
+- Wie sieht der Konstruktor in PHP Klassen aus?
+```php
+__construct(mixed ...$values = ""): void
+```
+- Wozu dient die „Variable“ $this?
+	- Die Pseudovariable `$this` ist verfügbar, wenn eine Methode aus einem Objektkontext heraus aufgerufen wird. `$this` ist eine Referenz auf das aufgerufene Objekt.
+- Welche Vorteile hat die Verwendung von OOP in PHP?
+	- [PHP: Einführung - Manual](https://www.php.net/manual/de/oop5.intro.php)
+	- Man kann die Vorteile von OOP nutzen
+		- Verwendung von Klassen
+		- Verwendung von Methoden
+- Welche Datenkapselungsmethoden gibt es in PHP?
+	- private
+	- public
+- Wie sehen abstrakte Klassen in PHP aus?
+	- [PHP: Klassenabstraktion - Manual](https://www.php.net/manual/de/language.oop5.abstract.php)
+```php
+<?php
+abstract class AbstractClass
+{
+    // Die abgeleitete Klasse zwingen, diese Methoden zu definieren
+    abstract protected function getValue();
+    abstract protected function prefixValue($prefix);
 
+    // Gemeinsame Methode
+    public function printOut()
+    {
+        print $this->getValue() . "\n";
+    }
+}
+```
 ## Notizen aus dem Unterricht
 
 ## Quellen
