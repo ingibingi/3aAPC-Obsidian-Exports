@@ -92,14 +92,20 @@ info:
 - "Sicherer" Bereich eines Netzwerks
 - Kommunikation nach Außen ist eingeschränkt
 	- z. B. durch Firewall
+- DMZ beinhaltet oft Inhalte, die öffentlich zugänglich gemacht werden müssen
+- Empfehlung Abschottung sowohl nach Innen und nach außen
+  ![|400](../../Other%20Files/Images/Pasted%20image%2020241218152039.png)
 #### Was versteht man unter einem „IDS“ im Kontext Netzwerksicherheit?
 - IDS...Instrusion Detection System
 - Wichtiges Element für eine DMZ
 - Erkennt falls diese kompromittiert wurde
+- Wie gut ist die Erkennung?
+	- False Positive
+	- False Negative
 #### Was versteht man unter einem „IPS“ im Kontext Netzwerksicherheit?
 - IPS... Instrusion Prevention System
 - Reagiert bei komprommitierung der DMZ
-	- z. B. Sperrt den Traffic von einer IP-Adresse
+	- z. B. Sperrt den Traffic zu/von einer "verdächtigen" IP-Adresse
 #### Was sind die aktuell 3 häufigsten Bedrohungen der Netzwerksicherheit?
 >lt. https://www.computerweekly.com/de/tipp/Netzwerksicherheit-Die-3-groessten-Gefahren-und-ihre-Abwehr
 - Malware
@@ -129,7 +135,7 @@ info:
 - Angreifer fordert Lösegeld für den Zugriff auf die eigenen Daten
 #### Was versteht man unter „Phishing“ – im Kontext Malware -  Erklärung anhand Beispiel?!
 - "Enkeltrick"
-- Website, E-Mail, Werbebanner, etc.
+- Website, E-Mail, Werbebanner, Anruf etc.
 - Ausgabe als das Original, um z. B. Passwörter zu erschleichen
 #### Was versteht man unter der „Zero-Day-Lücke“? – mit welchen Fristen wird in diesem Zusammenhang üblicherweise gerechnet?
 - Neue (bisher unbekannte) Lücke
