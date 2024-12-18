@@ -94,7 +94,7 @@ info:
 	- z. B. durch Firewall
 - DMZ beinhaltet oft Inhalte, die öffentlich zugänglich gemacht werden müssen
 - Empfehlung Abschottung sowohl nach Innen und nach außen
-  ![](../../Other%20Files/Images/Pasted%20image%2020241218152039.png)
+  ![](attachment/1748cd29b0c59aec4d6323b7e51fa000.png)
 #### Was versteht man unter einem „IDS“ im Kontext Netzwerksicherheit?
 - IDS...Instrusion Detection System
 - Wichtiges Element für eine DMZ
