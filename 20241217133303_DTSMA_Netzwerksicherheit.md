@@ -89,7 +89,7 @@ info:
 - Kommunikation nach Außen ist eingeschränkt
 	- z. B. durch Firewall
 - DMZ beinhaltet oft Inhalte, die öffentlich zugänglich gemacht werden müssen
-- Empfehlung Abschottung sowohl nach Innen und nach außen
+- Empfehlung: Abschottung sowohl nach Innen und nach außen
   ![](attachment/162d8450213baf550baa07272130103a.png)
 #### Was versteht man unter einem „IDS“ im Kontext Netzwerksicherheit?
 - IDS...Instrusion Detection System
@@ -139,7 +139,8 @@ info:
 - Lücke noch nicht länger als 24h bekannt
 - Noch kaum Gelegenheit sich gegen Angriffe zu verteidigen
 #### Zu welchem Zeitpunkt spricht man von einer „N-Day-Schwachstelle“ im Kontext Zero-Day-Lücke?
-- Bereits länger bekannte Lücke
+- Lücke, für die es bereits einen Fix gibt
+- Patch wurde auf Zielsystem noch nicht implementiert
 #### Welche Maßnahmen können ergriffen werden um „Zero-Day-Exploits“ zu verhindern?
 - Sicherheitsstandards einhalten
 - Pen-Tester engagieren
@@ -160,7 +161,7 @@ info:
 - Phishing
 - Malware
 #### Wie können Angriffe seitens IDS/IPS erkannt werden?
-	- Durch Heuristiken Muster erkennen
+- Durch Heuristiken Muster erkennen
 - Vergleich Headerinformationen
 - Vergleich Signaturen 
 ---
