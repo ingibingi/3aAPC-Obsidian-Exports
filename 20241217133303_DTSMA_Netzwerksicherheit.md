@@ -66,12 +66,12 @@ info:
 ---
 ## Lösung
 ### Netzwerktechnik allgemein
-#### Übersicht zu Grundfunktionen einer Firewall erstellen
-#### 3 Schutzmechanismen für Netzwerke aufzählen
-#### Hacking: Mögliche Angriffspunkte nennen und beschreiben
-#### Datenabflusspunkte im Kontext Internetnutzung wiedergeben können
-#### Protokoll zur Synchronisierung nennen  
-#### Zeitsynchronisierung in Serversystemen beschreiben und begründen
+- Übersicht zu Grundfunktionen einer Firewall erstellen
+- 3 Schutzmechanismen für Netzwerke aufzählen
+- Hacking: Mögliche Angriffspunkte nennen und beschreiben
+- Datenabflusspunkte im Kontext Internetnutzung wiedergeben können
+- Protokoll zur Synchronisierung nennen  
+- Zeitsynchronisierung in Serversystemen beschreiben und begründen
 ### Netzwerksicherheit Fragen
 #### Welche prinzipielle Aufgabe hat eine Firewall?
 - Ein Netzwerk vor ungewünschtem Traffic schützen
@@ -83,10 +83,6 @@ info:
 	- Netzwerke lassen sich in unterschiedlich "sichere" Bereiche abgrenzen
 - Personal Firewall
 	- überprüft den Traffic an einem Endgerät
-- Generell
-	- Firewall beobachtet 
-		- Header (IP-Adresse)
-		- Inhalt (Packet)
 #### Was ist und welche Aufgabe hat eine „DMZ“ im Kontext Netzwerksicherheit?
 - DMZ... DeMilitarised Zone
 - "Sicherer" Bereich eines Netzwerks
@@ -94,18 +90,19 @@ info:
 	- z. B. durch Firewall
 - DMZ beinhaltet oft Inhalte, die öffentlich zugänglich gemacht werden müssen
 - Empfehlung Abschottung sowohl nach Innen und nach außen
-  ![](attachment/1748cd29b0c59aec4d6323b7e51fa000.png)
+  ![](attachment/162d8450213baf550baa07272130103a.png)
 #### Was versteht man unter einem „IDS“ im Kontext Netzwerksicherheit?
 - IDS...Instrusion Detection System
 - Wichtiges Element für eine DMZ
 - Erkennt falls diese kompromittiert wurde
-- Wie gut ist die Erkennung?
+- Relevante Frage: Wie gut ist die Erkennung?
 	- False Positive
 	- False Negative
 #### Was versteht man unter einem „IPS“ im Kontext Netzwerksicherheit?
 - IPS... Instrusion Prevention System
 - Reagiert bei komprommitierung der DMZ
-	- z. B. Sperrt den Traffic zu/von einer "verdächtigen" IP-Adresse
+---
+  
 #### Was sind die aktuell 3 häufigsten Bedrohungen der Netzwerksicherheit?
 >lt. https://www.computerweekly.com/de/tipp/Netzwerksicherheit-Die-3-groessten-Gefahren-und-ihre-Abwehr
 - Malware
@@ -147,23 +144,38 @@ info:
 - Sicherheitsstandards einhalten
 - Pen-Tester engagieren
 - schnell patchen
-
+#### Was versteht man unter einem „White-, Grey-, Black-Hat“ – Hacker?
+- White
+	- Bewegen sich im gesetzlichen Rahmen
+- Grey
+	- Bewegen sich außerhalb des gesetzlichen Rahmens
+	- Keine böswillige Absicht
+- Black
+	- Bewegen sich außerhalb des gesetzlichen Rahmens
+	- Haben böswillige Absicht		- 
+#### Nennen Sie 5 Methoden von Hackern und erklären Sie diese kurz!
+- APT
+- DDOS
+- Ransomware
+- Phishing
+- Malware
+#### Wie können Angriffe seitens IDS/IPS erkannt werden?
+	- Durch Heuristiken Muster erkennen
+- Vergleich Headerinformationen
+- Vergleich Signaturen 
 ---
-- Was versteht man unter einem „White-, Grey-, Black-Hat“ – Hacker?
-- Nennen Sie 5 Methoden von Hackern und erklären Sie diese kurz!
-- Wie können Angriffe seitens IDS/IPS erkannt werden?
-- Was ist die Grundlage einer Authentifizierung?
-- Was versteht man unter einer Zweifaktor-Authentifizierung (2FA)?
-- Was versteht man unter einer Multifaktor-Authentifizierung (MFA)?
-- Welche Aufgabe hat Kerberos bzw. welches Ziel wurde bei der Entwicklung von Kerberos verfolgt?
-- Welche Eigenschaften weist Kerberos auf – kurze Erklärung?!
-- Wie läuft die Kerberos-Authentifizierung prinzipiell ab?
-- Welche 2 Vorteile werden durch Kerberos erreicht?
-- Wie werden Replay-Angriffe verhindert?
-- Warum ist es wichtig das in einem Netzwerk alle Systeme die gleiche Uhrzeit haben?
-- Was versteht man unter einem Token bzw. Token-Karten im Kontext Authentifizierung?
-- Welchen Vorteil bieten Tokensysteme gegenüber einer Smart-Card-Lösung?
-- Welchen Vorteil bietet ein Hardware-Token?
+#### Was ist die Grundlage einer Authentifizierung?
+#### Was versteht man unter einer Zweifaktor-Authentifizierung (2FA)?
+#### Was versteht man unter einer Multifaktor-Authentifizierung (MFA)?
+#### Welche Aufgabe hat Kerberos bzw. welches Ziel wurde bei der Entwicklung von Kerberos verfolgt?
+#### Welche Eigenschaften weist Kerberos auf – kurze Erklärung?!
+#### Wie läuft die Kerberos-Authentifizierung prinzipiell ab?
+#### Welche 2 Vorteile werden durch Kerberos erreicht?
+#### Wie werden Replay-Angriffe verhindert?
+#### Warum ist es wichtig das in einem Netzwerk alle Systeme die gleiche Uhrzeit haben?
+#### Was versteht man unter einem Token bzw. Token-Karten im Kontext Authentifizierung?
+#### Welchen Vorteil bieten Tokensysteme gegenüber einer Smart-Card-Lösung?
+#### Welchen Vorteil bietet ein Hardware-Token?
 
 ## Notizen aus dem Unterricht
 
