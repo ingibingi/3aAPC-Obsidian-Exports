@@ -82,7 +82,7 @@ info:
 	- Lässt nur "sicheren" Traffic durch
 	- Netzwerke lassen sich in unterschiedlich "sichere" Bereiche abgrenzen
 - Personal Firewall
-	- überprüft den Traffic an einem Endgerät
+	- Überprüft den Traffic an einem Endgerät
 #### Was ist und welche Aufgabe hat eine „DMZ“ im Kontext Netzwerksicherheit?
 - DMZ... DeMilitarised Zone
 - "Sicherer" Bereich eines Netzwerks
@@ -102,7 +102,6 @@ info:
 - IPS... Instrusion Prevention System
 - Reagiert bei komprommitierung der DMZ
 ---
-  
 #### Was sind die aktuell 3 häufigsten Bedrohungen der Netzwerksicherheit?
 >lt. https://www.computerweekly.com/de/tipp/Netzwerksicherheit-Die-3-groessten-Gefahren-und-ihre-Abwehr
 - Malware
@@ -166,9 +165,28 @@ info:
 - Vergleich Signaturen 
 ---
 #### Was ist die Grundlage einer Authentifizierung?
+- Abgleich von Muster und Abfrage
+- Mögliche Kriterien
+	- Sein
+		- Fingerabdruck
+		- Face ID
+	- Wissen
+		- Passwort
+		- Rätsel (zumindest wenn man einen DnD-Dungeon konstruiert)
+	- Haben
+		- Dongle
+		- Smartphone-App
+		- Schlüssel (Physikalischer)
 #### Was versteht man unter einer Zweifaktor-Authentifizierung (2FA)?
+- 2 Abfragen werden kombiniert
+	- optimalerweise unterschiedliche Kriterien
 #### Was versteht man unter einer Multifaktor-Authentifizierung (MFA)?
+- Mehrere Abfragen werden kombiniert
+	- optimalerweise unterschiedliche Kriterien
 #### Welche Aufgabe hat Kerberos bzw. welches Ziel wurde bei der Entwicklung von Kerberos verfolgt?
+- Ist ein Authentifizierungsprotokoll
+- Client und Server können jeweils eine Authentifizierung fordern.
+- 
 #### Welche Eigenschaften weist Kerberos auf – kurze Erklärung?!
 #### Wie läuft die Kerberos-Authentifizierung prinzipiell ab?
 #### Welche 2 Vorteile werden durch Kerberos erreicht?
