@@ -186,12 +186,84 @@ info:
 #### Welche Aufgabe hat Kerberos bzw. welches Ziel wurde bei der Entwicklung von Kerberos verfolgt?
 - Ist ein Authentifizierungsprotokoll
 - Client und Server können jeweils eine Authentifizierung fordern.
-- 
+- Kennwörter nicht in Klartext übertragen
+- verschlüsseltes Ticketsystem
 #### Welche Eigenschaften weist Kerberos auf – kurze Erklärung?!
+- Gegenseitige Authentifizierung
+	- sowohl Client als auch Server können eine Authentifizierung des Anderen fordern
+- Effizient
+	- Client zeigt Ticket
+	- Server überprüft Ticket
+- Weiterreichung der Authentifizierung
+	- Einmalige Anmeldung reicht für Gewährung auf sämtliche zustehende Funktionen
+- Transitivität
+	- A vertraut B und
+	- B vertraut C
+	- daraus folgt:
+		- A vertraut C
+- (Standardmäßig) Beiderseitiges Vertrauensverhältnis
+	- A vertraut B
+	- daraus folgt:
+		- B vertraut A
+- Interoperabilität
+	- Funktioniert auf UNIX und Windows
+- Keine Klartextübertragung von Kennwörtern
+	- Authentifizierung über Ticketsystem
+- Verwendet Symmetrische Verschlüsselung
 #### Wie läuft die Kerberos-Authentifizierung prinzipiell ab?
+- Server muss Kerberos Server vertrauen
+- Client muss Kerberos Server vertrauen
+### Client
+- Anfrage an Kerberos Authentication Server (KAS)
+	- beinhaltet verschlüsseltes Client-Passwort
+### Kerberos Authentication Server
+- Überprüfung Passwort (Datenbank)
+- SK1 generieren
+	- SK1... Session Key 1
+- SK1 mit Client-Schlüssel verschlüsseln
+- TGT erstellen und verschlüsseln:
+	- TGT... Ticket Granting Ticket
+	- beinhaltet
+		- verschlüsselten SK1
+		- Timestamp, etc.
+- TGT an Client senden
+![](attachment/5da26a5def96baecfadb0843c582fbae.png)
+### Client
+- Anfrage an Ticket Granting Server (TGS)
+	- Beinhaltet:
+		- Mit SK1 verschlüsselte Nutzerdaten
+		- TGT
+### Ticket Granting Server
+- Entschlüsselt von Client empfangene Daten
+- Überprüft damit:
+	- Client hatte sich korrekt bei KAS gemeldet
+		- Beweis: TGT vorhanden
+	- Client ist wirklich der Client
+		- Beweis: SK1 vorhanden
+- Session Ticket für Zielserver erstellen
+	- SK2 erstellen
+	- Mit SK1 verschlüsseln
+#ToDo/Finish
 #### Welche 2 Vorteile werden durch Kerberos erreicht?
+- Viele Endgeräte in einem Netzwerk können sich gegenseitig autentifizieren, ohne dass dafür jedes mal eine neuer Schlüsselaustausch durchgeführt werden muss
+- Symmetrische Verschlüsselung ist sicherer gegen Quantencomputer
+	- [Taming Kerberos - Computerphile](https://www.youtube.com/watch?v=qW361k3-BtU)
 #### Wie werden Replay-Angriffe verhindert?
+- Replay-Angriffe
+	- Versendetes, gehashtes Passwort wird abgegriffen.
+		- Man kann nun den Hash zur Anmeldung verwenden.
+- Nonce
+	- Beim Hashing wird dem Text eine Zeichenfolge angefügt
+		- Dadurch entsteht ein anderer Hash
+	- die verwendete Zeichenfolge wird als Klartext mitgesendet
+	- Der Server akzeptiert jede nonce nur 1x
 #### Warum ist es wichtig das in einem Netzwerk alle Systeme die gleiche Uhrzeit haben?
+- Kerberos akzeptiert keine "alten" Zertifikate
+	- ... oder zukünftige
+- Ansonsten
+	- Als Nonce bieten sich Timestamps an, da die verwendeten nonces nicht extra gespeichert werden müssen.
+	- Wegen Latenzen müssen Zeitfenster statt Zeitpunkte verwendet werden.
+	- Innerhalb dieser Zeitfenster besteht Anfälligkeit für Replay-Angriffe
 #### Was versteht man unter einem Token bzw. Token-Karten im Kontext Authentifizierung?
 #### Welchen Vorteil bieten Tokensysteme gegenüber einer Smart-Card-Lösung?
 #### Welchen Vorteil bietet ein Hardware-Token?
