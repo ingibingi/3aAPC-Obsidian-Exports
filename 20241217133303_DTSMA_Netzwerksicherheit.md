@@ -2,9 +2,9 @@
 aliases: 
 cssclasses: 
 tags:
-  - 3aAPC
   - ToDo/Submit
   - ToDo/Finish
+  - 3aAPC/DTSM
 date: 2024-12-17
 deadline: 
 hideFromQuery: false
@@ -213,10 +213,10 @@ info:
 #### Wie läuft die Kerberos-Authentifizierung prinzipiell ab?
 - Server muss Kerberos Server vertrauen
 - Client muss Kerberos Server vertrauen
-### Client
+##### Client
 - Anfrage an Kerberos Authentication Server (KAS)
 	- beinhaltet verschlüsseltes Client-Passwort
-### Kerberos Authentication Server
+##### Kerberos Authentication Server
 - Überprüfung Passwort (Datenbank)
 - SK1 generieren
 	- SK1... Session Key 1
@@ -228,24 +228,33 @@ info:
 		- Timestamp, etc.
 - TGT an Client senden
 ![](attachment/5da26a5def96baecfadb0843c582fbae.png)
-### Client
+##### Client
 - Anfrage an Ticket Granting Server (TGS)
 	- Beinhaltet:
 		- Mit SK1 verschlüsselte Nutzerdaten
 		- TGT
-### Ticket Granting Server
+##### Ticket Granting Server
 - Entschlüsselt von Client empfangene Daten
 - Überprüft damit:
 	- Client hatte sich korrekt bei KAS gemeldet
 		- Beweis: TGT vorhanden
 	- Client ist wirklich der Client
 		- Beweis: SK1 vorhanden
-- Session Ticket für Zielserver erstellen
+- Session Ticket **für Zielserver** erstellen
 	- SK2 erstellen
 	- Mit SK1 verschlüsseln
 #ToDo/Finish
+##### Client
+- Sendet SK2 an Zielserver
+##### Server
+- Überprüft SK2
+- sendet SK2 an Client zurück
+##### Erklärungen Stunde
+- 
 #### Welche 2 Vorteile werden durch Kerberos erreicht?
-- Viele Endgeräte in einem Netzwerk können sich gegenseitig autentifizieren, ohne dass dafür jedes mal eine neuer Schlüsselaustausch durchgeführt werden muss
+- Viele Endgeräte in einem Netzwerk können sich gegenseitig autentifizieren, ohne dass dafür jedes mal eine neuer Schlüsselaustausch (mit übertragung von Passwörtern) durchgeführt werden muss
+- Single Sign-On
+- Keine übertragung von unverschlüsselten Passwörtern
 - Symmetrische Verschlüsselung ist sicherer gegen Quantencomputer
 	- [Taming Kerberos - Computerphile](https://www.youtube.com/watch?v=qW361k3-BtU)
 #### Wie werden Replay-Angriffe verhindert?
@@ -255,7 +264,7 @@ info:
 - Nonce
 	- Beim Hashing wird dem Text eine Zeichenfolge angefügt
 		- Dadurch entsteht ein anderer Hash
-	- die verwendete Zeichenfolge wird als Klartext mitgesendet
+	- die verwendete Zeichenfolge wird zusätzlich als Klartext mitgesendet
 	- Der Server akzeptiert jede nonce nur 1x
 #### Warum ist es wichtig das in einem Netzwerk alle Systeme die gleiche Uhrzeit haben?
 - Kerberos akzeptiert keine "alten" Zertifikate
@@ -265,8 +274,18 @@ info:
 	- Wegen Latenzen müssen Zeitfenster statt Zeitpunkte verwendet werden.
 	- Innerhalb dieser Zeitfenster besteht Anfälligkeit für Replay-Angriffe
 #### Was versteht man unter einem Token bzw. Token-Karten im Kontext Authentifizierung?
+- Authentifizierungstoken
+	- Sind Alternative/Ergänzung zu Passwort
+	- Gelten oft nur begrenzt (1x/innerhalb Zeitraum)
+- Token-Karte
+	- Gerät, das Authentifizierungstoken erstellt/bereit stellt
+	- z. B. Athenticator-App
 #### Welchen Vorteil bieten Tokensysteme gegenüber einer Smart-Card-Lösung?
+- Smart-Card beinhaltet bloß Anmeldedaten
+	- Kann abgegriffen werden
 #### Welchen Vorteil bietet ein Hardware-Token?
+- Authentifizierung mit "haben"
+	- kann nicht einfach digital kopiert werden (gütigkeit zeitlich begrenzt)
 
 ## Notizen aus dem Unterricht
 
