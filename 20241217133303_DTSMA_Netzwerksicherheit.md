@@ -284,8 +284,9 @@ info:
 - Smart-Card beinhaltet bloß Anmeldedaten
 	- Kann abgegriffen werden
 #### Welchen Vorteil bietet ein Hardware-Token?
+- "Schlüsselanhänger" der selbständig Token generiert
 - Authentifizierung mit "haben"
-	- kann nicht einfach digital kopiert werden (gütigkeit zeitlich begrenzt)
+	- kann nicht einfach digital kopiert werden (gültigkeit zeitlich begrenzt)
 
 ## Notizen aus dem Unterricht
 
