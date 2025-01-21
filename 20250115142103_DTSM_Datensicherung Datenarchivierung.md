@@ -103,15 +103,116 @@ info:
 | 3.5" Floppy                | 360 KByte (1980)<br>3 MByte (1990)<br>1.44 MB                                                     | Mobiler Datenträger         | Empfindlich auf Magneten                                  |
 | HDD-Festplatte             | x GB (1997)<br>x TB (2008)                                                                        | PCs                         | Empfindlich auf Erschütterung                             |
 | Kernspeicher (Moby Memory) | 1.2 MiByte (1950)                                                                                 | Supercomputer               | Groß, Sehr(!) teuer                                       |
-| SSD                        | 8 TB (2025)                                                                                       | PCs                         | Begrenzte Schreibzyklen                                   |
+| SSD                        | 8 TB (2024)                                                                                       | PCs                         | Begrenzte Schreibzyklen                                   |
 | Magnetband                 | 3 MB (1950)<br>20 MB (1960)<br>100 MB (1970)<br>400 MB<br>(1985)<br>100 GB (2000)<br>18 TB (2020) | Langzeitspeicherung         | Teure Schreib/Lese Hardware                               |
 | Datasette                  | 1 MB (1980)                                                                                       | Mobiler Datenträger         |                                                           |
 | USB-Stick                  | MB-GB                                                                                             | Mobiler Datenträger         | Wird immer falsch herum reingesteckt (vor USB-C Standard) |
 | SDHC-Karte                 | bis 2TB                                                                                           | Aufnahme von Bildern/Videos |                                                           |
-| CD                         | 650 MB                                                                                            | Archivierung                | Begrenzte Lebensdauer                                     |
-| DVD                        | 5 GB                                                                                              | Archivierung                | Begrenzte Lebensdauer                                     |
-| Blu-Ray                    | 25 GB                                                                                             | Archivierung                | Begrenzte Lebensdauer                                     |
+| CD                         | ~0.50 GB                                                                                          | Archivierung                | Begrenzte Lebensdauer                                     |
+| DVD                        | ~5 GB                                                                                             | Archivierung                | Begrenzte Lebensdauer                                     |
+| Blu-Ray                    | ~50 GB                                                                                            | Archivierung                | Begrenzte Lebensdauer                                     |
+## Sicherungskonzepte
+### Komplettsicherung
+- auch Vollsicherung genannt
+- Vorteile
+	- vollständiger Datensatz
+	- leicht wiederherstellbar
+- Nachteile
+	- Zeitaufwändig
+	- Hoher Speicherbedarf
+### Differentielle Sicherung
+- Änderungen relativ zur letzten Vollsicherung werden gesichert
+- Jede neue Sicherung beinhaltet jede Änderung bis zur letzten Vollsicherung
+- Mittlerer Speicherbedarf
+### Inkrementielle Sicherung
+- Änderungen relativ zur letzten Inkrementellen Sicherung werden gesichert
+- Wiederherstellung verglichsweise aufwändiger
+- Geringster Speicherbedarf
+### 3-2-1 Regel
+- 3 Datenkopien
+- 2 Medien (z. B. Festplatte & DVD)
+- 1 Kopie an anderem Ort (z. B. Privete / Public Cloud)
+### Hybrid Cloud
+- Mischform Private und Public Cloud
+### Großvater-Vater-Sohn
+#### Beispiel
+zusätzlich "Großvater" für Archivierung
+- 4 Sohn-Festplatten (Tag)
+	- S1...Montag
+	- S2...Dienstag
+	- S3...Mittwoch
+	- S4...Donnerstag
+- 4 Vater-Festplatten (Woche)
+	- V1...1. Freitag im Monat
+	- V2...2. Freitag im Monat
+	- V3...3. Freitag im Monat
+	- V4...4. Freitag im Monat
+- 12 Großvater-Festplatten (Monat)
+	- G1...1. Jänner
+	- G2...1. Februar
+	- G3...1. März
+	- ...
+	- G12...1. Dezember
+- ? Urgroßvater-Festplatten (Jahr)
+  evtl. nicht überschreiben, um Archivierung zu erhalten
+	- U1...01.01.2021
+	- U2...01.01.2022
+	- U3...01.01.2023
+	- ...
+- neues Backup einer Generation überschreiben die älteren
+	- das neueste jeweils das älteste des jeweiligen Levels
+- -> Man hat:
+	- Tägliche Backups der letzten (4+1=) 5 Tage
+	- Wöchentliche Backups des letzten Monats
+	- Monatliche Backups des letzten Jahres
+	- Jährliche Backups zur Archivierung
+### Türme von Hanoi
+- Unterschiedliche Medien
+- Älteste Sicherung vor $2^{n-1}$ Tagen
+	- n... Anzahl Speichermedien
 
 
-## Quellen
-- 
+| Tag | A   | B   | C   | D   | E   |
+| --- | --- | --- | --- | --- | --- |
+| 1   | x   |     |     |     |     |
+| 2   |     | x   |     |     |     |
+| 3   | x   |     |     |     |     |
+| 4   |     |     | x   |     |     |
+| 5   | x   |     |     |     |     |
+| 6   |     | x   |     |     |     |
+| 7   | x   |     |     |     |     |
+| 8   |     |     |     | x   |     |
+| 9   | x   |     |     |     |     |
+| 10  |     | x   |     |     |     |
+| 11  | x   |     |     |     |     |
+| 12  |     |     | x   |     |     |
+| 13  | x   |     |     |     |     |
+| 14  |     | x   |     |     |     |
+| 15  | x   |     |     |     |     |
+| 16  |     |     |     |     | x   |
+| 17  | x   |     |     |     |     |
+# Datenschutz
+- Datensparsamkeit
+	- nur zwingend benötigte Daten verwenden
+- Vertraulichkeit
+	- Daten nur an Befugte.
+	- Kein Zugriff durch Unbefugte
+- Datenintegrität
+	- Keine Manipulation/kein Löschen der Daten
+	- auch nicht durch technische Störungen
+- Verfügbarkeit
+	- Daten müssen abrufbar sein, wenn der Benutzer es will
+	
+## Anonymisierung
+- Daten werden so verändert, dass die Zuordnung auf eine Person nicht (oder nur mit unzumutbarem Aufwand) möglich ist
+## Datenschutzfreundliche Software
+- Quelloffene (Open Source) Software sind oft (nicht immer) eher datenschutzfreundlich
+## Teststoff
+- Netzwerksicherheit 19-23
+- Unterschied Backup/Sicherung
+- Backup-Strategie - Generationenprinzip
+- Speichermedien (siehe Präsentation)
+	- Kapazitäten
+- 3-2-1 Backup Strategie Regel
+- Vorteile/Nachteile Cloud Backup
+- Was ist eine Hybrid Cloud
