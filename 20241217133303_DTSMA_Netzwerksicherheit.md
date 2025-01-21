@@ -211,6 +211,7 @@ info:
 	- Authentifizierung über Ticketsystem
 - Verwendet Symmetrische Verschlüsselung
 #### Wie läuft die Kerberos-Authentifizierung prinzipiell ab?
+![](attachment/4e9fa4d6bd86fc618ceb7c37cc956026.png)
 - Server muss Kerberos Server vertrauen
 - Client muss Kerberos Server vertrauen
 ##### Client
@@ -249,8 +250,6 @@ info:
 ##### Server
 - Überprüft SK2
 - sendet SK2 an Client zurück
-##### Erklärungen Stunde
-- 
 #### Welche 2 Vorteile werden durch Kerberos erreicht?
 - Viele Endgeräte in einem Netzwerk können sich gegenseitig autentifizieren, ohne dass dafür jedes mal eine neuer Schlüsselaustausch (mit übertragung von Passwörtern) durchgeführt werden muss
 - Single Sign-On
