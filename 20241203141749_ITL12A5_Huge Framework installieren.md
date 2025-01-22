@@ -26,6 +26,7 @@ info:
 
 ---
 ## Angabe
+### Installation
 1. Aufgabenstellung
 Installation des Framework
 Grundkonfiguration
@@ -41,13 +42,16 @@ Dokumentation:
         ◦ Controller
         ◦ Core
         ◦ View
-
 2. Fragen
     1. Wie sieht der Konstruktor in PHP Klassen aus?
     2. Wozu dient die „Variable“ $this?
     3. Welche Vorteile hat die Verwendung von OOP in PHP?
     4. Welche Datenkapselungsmethoden gibt es in PHP?
     5. Wie sehen abstrakte Klassen in PHP aus?
+### Anpassungen
+- Captcha-Abfrage entfernen
+- E-Mail Überprüfung entfernen
+- Reg
 
 ---
 ### ToDo
@@ -159,6 +163,8 @@ abstract class AbstractClass
     }
 }
 ```
+
+
 ## Notizen aus dem Unterricht
 
 ## Quellen
