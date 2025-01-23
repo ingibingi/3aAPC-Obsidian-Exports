@@ -1,0 +1,194 @@
+---
+aliases: 
+cssclasses: 
+tags:
+  - 3aAPC/Inf
+date: 2025-01-08
+deadline: 
+hideFromQuery: false
+link: 
+info:
+---
+
+# Verschlüsselung
+---
+- Autor: Ingo Schlapschy
+- Schuljahr: 2024/25
+- Lehrgang: 2
+- Klasse: 3aAPC
+- Gruppe: C
+- Fach: Informatik
+- Datum: 2025-01-08
+---
+## Symmetrische Verschlüsselung
+- DES (Data Encryption Standard)
+	- Veralteter Standard aus 1977
+	- Rundenbasierte (16-fach) Block-Chiffre
+	- Schlüssellänge: 56 Bit
+	- Blockgröße: 64 Bit
+- AES (Advanced Encryption Standard)
+	- Aktueller Standard seit 2000
+	- Rundenbasierte Block-Chiffre
+	- Arbeitet mit simpler Matrix -> effizient
+	- Blockgröße: 128 Bit
+	- Schlüssellänge
+		- AES-128, AES-192, AES-256 (Bit)
+- Blowfish
+	- 1993
+	- nicht patentiert
+	- feste blocklänge 64 bit
+	- Schlüssellänge 32-448 Bit
+	- Nachfolger: Twofish
+		- 1998
+		- doppelte Blockgröße
+## Asymmetrische Verschlüsselung
+- RSA (Rivest, Shamir, Adleman)
+	- 1977
+	- Verschlüsselung
+		- Verschlüsseln
+			- Mit Public Key
+		- Entschlüsseln
+			- Mit Private Key
+	- Digitale Signatur
+		- Signieren
+			- Mit Private Key
+		- Signatur prüfen
+			- Mit Public Key
+- Elgamal
+	- 1985
+- Diffie-Hellmann
+	- 1976
+	- Schlüsselaustausch
+		- Asymmetrisches Verfahren
+		- Einsatzzweck: Symmetrische Schlüssel erstellen und austauschen
+	- Beide führen mit Operation durch
+		- mit Bekanntem Startwert
+		- mit geheimen Operand
+	- Ergebnis wird dem Anderen geschickt
+	- Erhaltenes Ergebnis erneut mit selbem geheimen Operand durchführen
+		- Reihenfolge egal -> **Beide erhalten selben Schlüssel**
+	- Berechnung des geheimen Operands über Umkehrfunktion nicht möglich
+		- Modulo auf Potenzfunktion
+- SHA (Secure Hashing Algorithm)
+## Notizen aus dem Unterricht
+- Wozu Verschlüsselung?
+	- Damit nicht jeder meine Daten abgreifen kann.
+	- Damit meine Daten nicht von Fremden angepasst werden können
+- symmetrische Verschlüsselung
+	- Selber Schlüssel für Ver- und Entschlüsselung
+	- 2 Verfahren
+		- DES
+		- AES
+- asymmetrische Verschlüsselung
+	- Unterschiedliche Schlüssel zur Ver-, und Entschlüsselung
+	- Private und Public Key
+	- 2 Verfahren
+		- RSA
+		- SHA
+- Block-Chiffre
+	- zu verschlüsselnder Klartext wird in Blöcke unterteilt, die jeweils unterschiedlich verschlüsselt werden
+- DES (Data Encryption Standard)
+	- Veralteter Standard der 1970er
+	- Rundenbasierte (16-fach) Block-Chiffre
+- AES (Advanced Encryption Standard)
+	- Aktueller Standard seit 2000
+	- Rundenbasierte Block-Chiffre
+	- Arbeitet mit simpler Matrix -> effizient
+	- Blockgröße & Schlüssellänge
+- SHA (Secure Hashing Algorithm)
+- RSA (Rivest, Shamir, Adleman)
+- Stromverschlüsselung
+	- Unterscheidung zu Block-Chiffre: Für gesamten Klartext wird die selbe Verschlüsselung verwendet
+- Klartext
+	- Unverschlüsselter Text
+- Chiffre
+	- Verschlüsselter Text
+- Cäsar-Verschlüsselung
+	- Verschiebung eines Buchstaben um einen fixen Wert
+- Salting
+	- Einem Password wird, bevor es gehasht wird ein String angehängt und als Klartext zusätzlich zum gehashten Passwort gespeichert
+	- User mit dem Selben Passwort haben unterschiedliche Hashes
+	- Verwendung von Rainbow-Tables wird unmöglich
+		- Liste von gehashten, häufigsten Passwörtern
+- Fido2
+- Passkey
+- Blowfish
+	- symmetrisch
+	- 1993
+	- nicht patentiert
+	- feste blocklänge 64bit
+	- variable schlüssellänge 32-448 Bit
+	- Nachfolger Twofish
+		- 1998
+		- doppelte blockgröße
+- Serpent
+- OTP (One Time Password)
+- PGP
+	- 1991
+	- hybride Verschlüsselung
+- Diffie-Hellmann-Schlüsselaustausch
+	- 1976
+- Elgamal-Verschlüsselungsverfahren
+	- 1985
+- PGP
+	- PGP...Pretty Good Privacy
+	- Hybrides Verfahren
+		- Symmetrisch und Asymmetrisch
+	- 1991
+- Was bedeuten
+	- Vertraulichkeit
+		- Verschlüsselte Inhalte können nicht von Dritten ausgelesen werden
+	- Verfügbarkeit
+		- Ver- und Entschlüsselung muss jederzeit möglich sein.
+	- Authentizität
+		- Entität ist tatsächlich, was sie vorgibt zu sein
+	- Integrität
+		- Daten wurden auf dem Weg nicht verändert
+- Message Digest (eindeutiger Fingerprint)
+	- Erstellt aus beliebiger Nachricht (Länge egal) einen Hashwert
+		- MD5: erstellt immer 128 Bit Hashwert
+	- Höchst unwahrscheinlich, dass 2 unerschiedliche Nachrichten den selben Wert ergeben
+	- Ähnliche Nachrichten haben komplett unerschiedliche Hashes
+- Protokolle
+	- TLS
+		- TLS...Transport Layer Security
+		- 1994 v1.0
+		- 2018 v1.3
+		- Früher: SSL
+			- verwendet Diffie-Hellmann
+		- OSI: Layer 5 (Session)
+		- Handshake
+			- Erstellen und Austausch eines Schlüssels zwischen Client und Server
+			- Authentifizierung
+			- Asymmetrische Verschlüsselung
+		- Record
+			-  Symmetrische Verschlüsselung
+		- MAC... Message Authentication Code
+		- Funktionsweise
+			- Server authentifiziert sich gegenüber Client mit einem Zertifikat
+	- SSH
+		- Remote Zugang
+	- https
+	- Was haben diese Protokolle mit Zertifikaten zu tun?
+- Graph
+	- Baum mit bewerteten Kanten
+		- Kanten können Richtung haben
+	- Gerichtet/Ungerichtet
+	- Adjazenzmatrix
+		- Speichert, welche Knoten durch eine Kante verbunden sind
+		- sprich: Darstellung eines Graphen als Matrix
+		- Werte können gewichtet sein
+			- Dauer/Kosten der Verbindung
+			- Ansonsten Binär:
+				- 0...keine Verbindung
+				- 1...hat Verbindung
+	- Algorythmen für kürzesten Weg
+		- Backtracking
+			- Kürzesten, ungetesteten Pfad überprüfen ob er zum ziel führt
+			- Wiederholen, bis man einen Weg zum Ziel gefunden hat
+		- Dijkstra
+		![How Dijkstra's Algorithm Works - YouTube](https://www.youtube.com/watch?v=EFg3u_E6eHU)
+		- Warshall
+			- Adjazenzmatrix
+## Quellen
+- [Verschlüsselung Allgemein.docx](https://www.eduvidual.at/mod/resource/view.php?id=6816938)
