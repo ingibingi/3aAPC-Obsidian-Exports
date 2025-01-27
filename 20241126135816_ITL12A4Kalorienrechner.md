@@ -3,8 +3,6 @@ aliases:
 cssclasses: 
 tags:
   - 3aAPC
-  - ToDo/Submit
-  - ToDo/Finish
   - 3aAPC/ITL12
 date: 2024-11-26
 deadline: 
@@ -42,10 +40,10 @@ Um abzunehmen sollten ca. 400 Kalorien weniger konsumiert werden. Beim Zunehmen 
 
 ---
 ### ToDo
-- [ ] Formular erstellen
-- [ ] Werte auslesen
-- [ ] Kalorienverbrauch berechnen und ausgeben
-- [ ] Abgeben
+- [x] Formular erstellen
+- [x] Werte auslesen
+- [x] Kalorienverbrauch berechnen und ausgeben
+- [x] Abgeben
 ## Lösung
 Screenshot ![](attachment/f5f6548028f9f51eeeab334b2595aed7.png)
 ### index.php

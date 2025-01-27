@@ -2,9 +2,7 @@
 aliases: 
 cssclasses: 
 tags:
-  - 3aAPC/
-  - ToDo/Finish
-  - ToDo/Submit
+  - 3aAPC/DTSM
 date: 2024-11-15
 deadline: 2024-11-15
 hideFromQuery: false
@@ -18,11 +16,10 @@ info:
 - Schuljahr: 2024/25
 - Lehrgang: 2
 - Klasse: 3aAPC
+- Gruppe: C
 - Fach: DTSM
 - Datum: 2024-11-15
 ---
-Inhaltsverzeichnis
-
 - [Angabe](#angabe)
 	- [ToDo](#todo)
 - [Lösung](#l%C3%B6sung)
@@ -38,6 +35,7 @@ Inhaltsverzeichnis
 		- [Arten Beabsichtigter Redundanz](#arten-beabsichtigter-redundanz)
 		- [Verkabelungs-Tipps](#verkabelungs-tipps)
 - [Quellen](#quellen)
+---
 ## Angabe
 
 > [!Angabe] Original
@@ -53,7 +51,13 @@ Inhaltsverzeichnis
 - [x] Server Einsatzbereiche
 - [x] Schutzkonzepte Serverhardware
 	- [x] Verkabelung
+---
 ## Lösung
+### Server vs Client
+- Server
+	- Führt einen Dienst aus
+- Client
+	- Möchte einen Dienst ausgeführt bekommen
 ### Über Serverhardware
 - An und für sich entscheidet nicht die Hardware ob es sich um einen Server oder Client handelt, sondern die Software.
 - Je nach Situation macht es aber Sinn dezidierte Serverhardware zu verwenden
@@ -147,6 +151,7 @@ Inhaltsverzeichnis
 #### Blade-Server
 - Modulares Gehäuse für Server Blades
 	- meist (wie [Rack-Server](#Rack-Server)) in ein Rack eingebaut
+	- Blades teilen sich ein Netzteil
 - Server Blade... der eigentliche Server
 - Vorteile/Nachteile:
 	- Wie Rack-Server aber noch...
@@ -155,7 +160,7 @@ Inhaltsverzeichnis
 		- teurer
 ### USV (Unterbrechungsfreie Stromversorgung)
 - Sichert die gewünschte Stromversorgung 
-- Mögliche Probleme
+- Mögliche Problemfälle
 	- Stromausfall
 	- Unterspannung
 	- Überspannung
@@ -166,6 +171,9 @@ Inhaltsverzeichnis
 	- Ermöglicht sicheres herunterfahren ohne Datenverluste
 	- Manchmal auch für weiteren Betrieb für begrenzten Zeitraum (Kritische Systeme)
 ### Redundanz
+- Instanzen doppelt vorhanden
+- Bedeutung: Überflüssig/Mehrfach vorhanden/Abgesichert
+	- Bei Ausfall eines Systems übernimmt die alternative
 - Unbeabsichtigte Redundanz
 	- Etwas doppelt machen, obwohl 1x reichen würde/besser wäre
 	- z. B. nicht normalisierte Datenbank
@@ -205,3 +213,4 @@ Inhaltsverzeichnis
 - [Unterbrechungsfreie Stromversorgung – Wikipedia](https://de.wikipedia.org/wiki/Unterbrechungsfreie_Stromversorgung)
 - [Redundanz | Die Bedeutung von Redundanz in der Informatik - IONOS](https://www.ionos.de/digitalguide/server/sicherheit/redundanz/)
 - [Network-Design-Advice-Video](https://www.youtube.com/watch?v=wwwAXlE4OtU&list=PLHSwC730k8Km1iUrlXvm7zrKOR8_NsDNn&index=7)
+- [IPCisco | Cisco Networking Academy | Network Certification | Learn](https://ipcisco.com/)

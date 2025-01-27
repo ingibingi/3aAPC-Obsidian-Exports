@@ -2,8 +2,6 @@
 aliases: 
 cssclasses: 
 tags:
-  - ToDo/Submit
-  - ToDo/Finish
   - 3aAPC/DTSM
 date: 2024-12-02
 deadline: 
